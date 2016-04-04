@@ -14,6 +14,4 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device.mk \
-    $(LOCAL_DIR)/omni_clark.mk
+add_lunch_combo omni_clark-userdebug
