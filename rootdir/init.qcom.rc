@@ -26,6 +26,7 @@ on init
     symlink /data/tombstones /tombstones
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
+    symlink /dev/block/platform/f9824900.sdhci /dev/block/bootdevice
 
 on fs
     mount_all fstab.qcom
