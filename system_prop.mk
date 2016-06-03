@@ -145,7 +145,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.coresight.config=stm-events \
     ro.bug2go.magickeys=24,26 \
     drm.service.enabled=true \
-    mdc_initial_max_retry=10
+    mdc_initial_max_retry=10 \
+    ro.build.fingerprint=motorola/clark_reteu/clark:5.1.1/LPH23.116-18/23:user/release-keys
 
 # For Playstore
 PRODUCT_PROPERTY_OVERRIDES += \
