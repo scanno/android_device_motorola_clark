@@ -116,7 +116,7 @@ PRODUCT_PACKAGES += \
     libmmcamera_interface \
     libmmjpeg_interface \
     mm-qcamera-app \
-    Snap
+    SnapdragonCamera
 
 # for off charging mode
 PRODUCT_PACKAGES += \
