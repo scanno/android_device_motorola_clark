@@ -54,18 +54,6 @@
     "revision": "android-6.0"
   },
   {
-    "remote": "github",
-    "repository": "AICP/kernel_motorola_msm8992",
-    "target_path": "kernel/motorola/msm8992",
-    "revision": "mm6.0"
-  },
-  {
-    "remote": "github",
-    "repository": "purenexus-clark/proprietary_vendor_motorola",
-    "target_path": "vendor/motorola",
-    "revision": "mm"
-  },
-  {
     "remote": "omnirom",
     "repository": "android_hardware_sony_thermanager",
     "target_path": "hardware/sony/thermanager",
@@ -78,9 +66,9 @@
     "revision": "android-6.0"
   },
   {
-    "remote": "github",
-    "repository": "CyanogenMod/android_device_qcom_common",
-    "target_path": "device/qcom/common",
-    "revision": "cm-13.0"
+    "remote": "omnirom",
+    "repository": "android_packages_apps_SnapdragonCamera",
+    "target_path": "packages/apps/SnapdragonCamera",
+    "revision": "android-6.0"
   }
 ]
