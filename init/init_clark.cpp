@@ -54,6 +54,9 @@ void vendor_load_properties()
 
     property_set("ro.product.model", sku);
 
+    property_set("ro.build.product", "clark");
+    property_set("ro.product.device", "clark");
+
     if (strstr(sku, "XT1572")) {
         property_set("ro.product.display", "Moto X Style");
         property_set("ro.telephony.default_network", "9");
@@ -137,7 +140,7 @@ static void setSsim(void)
     property_set("persist.radio.RATE_ADAPT_ENABLE", "1");
     property_set("persist.radio.VT_USE_MDM_TIME", "0");
     property_set("persist.radio.videopause.mode", "0");
-    property_set("persist.data.iwlan.enable", "false");
+    property_set("persist.data.iwlan.enable", "true");
     property_set("persist.radio.mcfg_enabled", "1");
     property_set("ro.mot.ignore_csim_appid", "true");
     property_set("persist.data.netmgrd.qos.enable", "true");
