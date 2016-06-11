@@ -99,9 +99,9 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 # IPA Manager
-PRODUCT_PACKAGES += \
-    ipacm \
-    IPACM_cfg.xml
+#PRODUCT_PACKAGES += \
+#    ipacm \
+#    IPACM_cfg.xml
 
 # Keylayout
 PRODUCT_COPY_FILES += \
