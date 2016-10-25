@@ -178,3 +178,11 @@ ro.usb.ptp_adb=0x2e84
 # Wifi Display
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
+
+# Build fingerprint
+ro.build.fingerprint=motorola/clark_reteu/clark:6.0/MPHS24.49-18-3/3:user/release-keys
+ro.product.device=clark
+
+# set SELinux property value
+ro.build.selinux=1
+

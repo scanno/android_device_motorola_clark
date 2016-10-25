@@ -32,9 +32,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
 PRODUCT_PACKAGES += \
-    audio_policy.msm8992 \
     audio.a2dp.default \
-    audio.primary.msm8992 \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
@@ -57,7 +55,7 @@ PRODUCT_PACKAGES += \
     libmmjpeg_interface \
     mm-qcamera-app \
     libshim_camera \
-    Snap
+    SnapDragonCamera
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/com.motorola.cameraone.xml:system/etc/permissions/com.motorola.cameraone.xml
@@ -85,14 +83,6 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libqdutils \
     libqdMetaData
-
-# Firmware extraction script
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/releasetools/extract_firmware.sh:install/bin/extract_firmware.sh
-
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -134,16 +124,34 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
-    libdivxdrmdecrypt \
+    libc2dcolorconvert
+ 
+#MM_AUDIO
+PRODUCT_PACKAGES += \
+    libOmxAacDec \
     libOmxAacEnc \
     libOmxAmrEnc \
-    libOmxCore \
     libOmxEvrcEnc \
+    libOmxMp3Dec \
     libOmxQcelp13Enc \
+    libOmxAc3HwDec \
+    libstagefright_soft_flacdec
+
+#MM_CORE
+PRODUCT_PACKAGES += \
+    libmm-omxcore \
+    libOmxCore
+
+#MM_VIDEO
+PRODUCT_PACKAGES += \
+    libdivxdrmdecrypt \
     libOmxVdec \
+    libOmxVdecHevc \
+    libOmxVdpp \
     libOmxVenc \
-    libstagefrighthw
+    libOmxVidEnc \
+    libstagefrighthw \
+    mm-vdec-omx-property-mgr
 
 # Memory
 $(call inherit-product, frameworks/native/build/phone-xxxhdpi-3072-dalvik-heap.mk)
@@ -206,6 +214,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/netmgr_config.xml:system/etc/data/netmgr_config.xml \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
+PRODUCT_PACKAGES += telephony-ext
+PRODUCT_BOOT_JARS += telephony-ext
+
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
     libqsap_sdk \
@@ -227,6 +238,11 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     thermanager
+
+# Timekeep
+PRODUCT_PACKAGES += \
+    timekeep \
+    TimeKeep
 
 # Wifi
 PRODUCT_COPY_FILES += \
