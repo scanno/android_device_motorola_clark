@@ -168,6 +168,10 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag
 
+# Offmode Charging
+PRODUCT_PACKAGES += \
+    omni_charger_res_images
+
 # Perf
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/etc/msm_irqbalance.conf
