@@ -495,11 +495,10 @@ service per_proxy /system/bin/pm-proxy
     disabled
     writepid /dev/cpuset/system-background/tasks
 
-service timekeep /system/bin/timekeep restore
+service time_daemon /system/bin/time_daemon
     class late_start
     user root
     group root
-    oneshot
     writepid /dev/cpuset/system-background/tasks
 
 service adsprpcd /system/bin/adsprpcd
@@ -529,7 +528,7 @@ service msm_irqbalance /system/bin/msm_irqbalance -f /system/etc/msm_irqbalance.
     writepid /dev/cpuset/system-background/tasks
 
 service cnd /system/bin/cnd
-    class late_start
+    class main
     socket cnd stream 660 root inet
     group root wakelock
     writepid /dev/cpuset/system-background/tasks
@@ -542,10 +541,10 @@ service batt_health /system/bin/batt_health
     class main
     group mot_pwric
 
-service charge_only_mode /system/bin/charge_only_mode
-    user root
-    group graphics system input
-    disabled
+service charger /charger
+    class charger
+    group log
+    seclabel u:r:healthd:s0
     writepid /dev/cpuset/system-background/tasks
 
 service motosh /system/bin/motosh boot

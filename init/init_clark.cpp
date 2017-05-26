@@ -74,13 +74,13 @@ void vendor_load_properties()
             property_set("ro.build.fingerprint", "motorola/clark_retla_ds/clark_ds:6.0/MPH24.49-18/18:user/release-keys");
         } else {
             setSsim();
-            property_set("ro.build.description", "clark_reteu-user 6.0 MPHS24.49-18-3 3 release-keys");
-            property_set("ro.build.fingerprint", "motorola/clark_reteu/clark:6.0/MPHS24.49-18-3/3:user/release-keys");
+            property_set("ro.build.description", "clark_reteu-user 6.0.1 MPHS24.107-58-1 1 release-keys");
+            property_set("ro.build.fingerprint", "motorola/clark_reteu/clark:6.0.1/MPHS24.107-58-1/1:user/release-keys");
         }
     } else if (sku == "XT1575") {
         /* US */
         setSsim();
-        property_set("ro.product.display", "Moto X Pure Edition");
+        property_set("ro.product.name", "Moto X Pure Edition");
         property_set("ro.ril.force_eri_from_xml", "true");
         property_set("ro.telephony.get_imsi_from_sim", "true");
         property_set("ro.telephony.default_network", "10");
@@ -90,6 +90,7 @@ void vendor_load_properties()
     } else if (sku == "XT1570") {
         /* China */
         setMsim();
+        property_set("ro.product.name", "Moto X Style");
         property_set("ro.telephony.default_network", "22");
         property_set("telephony.lteOnCdmaDevice", "1");
         property_set("persist.radio.mcfg_enabled", "1");
@@ -139,7 +140,7 @@ static void setSsim(void)
     property_set("persist.radio.RATE_ADAPT_ENABLE", "1");
     property_set("persist.radio.VT_USE_MDM_TIME", "0");
     property_set("persist.radio.videopause.mode", "0");
-    property_set("persist.data.iwlan.enable", "false");
+    property_set("persist.data.iwlan.enable", "true");
     property_set("persist.radio.mcfg_enabled", "1");
     property_set("ro.mot.ignore_csim_appid", "true");
     property_set("persist.data.netmgrd.qos.enable", "true");

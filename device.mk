@@ -60,6 +60,10 @@ PRODUCT_PACKAGES += \
     libshim_camera
 
 # Settings
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/com.motorola.cameraone.xml:system/etc/permissions/com.motorola.cameraone.xml
+
+# CMActions
 PRODUCT_PACKAGES += \
     CMActions \
     libjni_CMActions \
@@ -100,6 +104,10 @@ PRODUCT_PACKAGES += \
     init.qcom.power.sh \
     init.qcom.rc \
     ueventd.qcom.rc
+
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
+    ro.product.model \
+    ro.product.name
 
 # IPA Manager
 PRODUCT_PACKAGES += \
@@ -159,10 +167,6 @@ PRODUCT_PACKAGES += \
     nfc_nci.bcm2079x.default \
     NfcNci \
     Tag
-
-# Offmode Charging
-PRODUCT_PACKAGES += \
-    charger_res_images
 
 # Perf
 PRODUCT_COPY_FILES += \
@@ -232,11 +236,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     thermanager
 
-# Timekeep
-PRODUCT_PACKAGES += \
-    timekeep \
-    TimeKeep
-
 # Wifi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
@@ -248,7 +247,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
 
 PRODUCT_PACKAGES += \
-    dhcpcd.conf \
     hostapd \
     libwpa_client \
     wpa_supplicant \
